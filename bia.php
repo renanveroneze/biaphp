@@ -1,5 +1,7 @@
 <?php
 
+    error_reporting(E_ALL^E_NOTICE);
+
     /*
      *                                 ___           ___         ___           ___
      *      _____                     /\  \         /\  \       /\  \         /\  \
@@ -191,6 +193,5 @@
 
     }
 
-    error_reporting(E_ALL^E_NOTICE);
 
 ?>
