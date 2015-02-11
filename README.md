@@ -32,13 +32,13 @@ Is a Pre-processor to Transcompile language  to PHP
 ```python
 <?
   class Test
-  
+
     public __construct ->
-      
+
       if $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
-        
+
         print 'Not allowed to localhost'
-    
+
 ```
 
 
@@ -49,7 +49,7 @@ Is a Pre-processor to Transcompile language  to PHP
   class Test {
     public function __construct() {
       if($_SERVER['REMOTE_ADDR'] == '127.0.0.1') {
-        print 'Not allowed to localhost'; 
+        print 'Not allowed to localhost';
       }
     }
   }
@@ -69,4 +69,9 @@ Is a Pre-processor to Transcompile language  to PHP
 | @x | $this->x |
 | @@x | self::x |
 | ~x | parent::x |
+| $_S | $_SESSION |
+| $_P | $_POST |
+| $_G | $_GET |
+| $a ?: $b | $a ? $a : $b |
+
 
