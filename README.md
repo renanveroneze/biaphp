@@ -75,3 +75,4 @@ Is a Pre-processor to Transcompile language  to PHP
 | $_P | $_POST |
 | $_G | $_GET |
 | $a ?: $b | $a ? $a : $b |
+| self class class_name | class class_name{} new class_name |
