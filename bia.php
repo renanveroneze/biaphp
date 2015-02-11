@@ -139,6 +139,19 @@
 
             }
 
+
+            if(preg_match( '/self class/', $line_content )) {
+
+                preg_match_all( '/self class (\w+)/', $line_content, $selfies );
+                preg_match_all( '/([ ]{4})/', $line_content, $matches );
+                $ind = count( $matches[0] );
+                $tab = implode('', array_fill( 0, $ind, '    ' ));
+                $this->selfies[] = "\n" . $tab . 'new ' . $selfies[1][0] . ";\n";
+
+                $line_content = preg_replace( '/self class (.*)/', 'class $1', $line_content );
+
+            }
+
             return $line_content;
 
         }
@@ -160,7 +173,6 @@
         public function close_blocks( $content ) {
 
             $start_block_pattern = '/([\w ]+)(\((.*)\))? {/';
-            $others[] = '?>';
 
             foreach( $content as $k => $line ) {
 
@@ -216,6 +228,15 @@
                 $content[] = $v;
 
             }
+
+
+            foreach( $this->selfies as $v ) {
+
+                $content[] = $v;
+
+            }
+
+            $content[] = "\n" . '?>';
 
             return implode( '', $content );
 
