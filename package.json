@@ -1,0 +1,23 @@
+{
+  "author": {
+    "name": "Renan Veroneze"
+  },
+  "name": "biaphp",
+  "version": "0.0.1",
+  "keywords": [
+    "bia",
+    "biaphp",
+    "php",
+    "preprocessor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/renanveroneze/biaphp"
+  },
+  "readme": "",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/renanveroneze/biaphp/issues"
+  },
+  "homepage": "https://github.com/renanveroneze/biaphp"
+}
