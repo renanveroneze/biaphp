@@ -3,13 +3,17 @@
     "name": "Renan Veroneze"
   },
   "name": "biaphp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "bia",
     "biaphp",
     "php",
     "preprocessor"
   ],
+  "bin": {
+    "biaphp": "./bin/biaphp"
+  },
+  "main": "./bin/biaphp.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/renanveroneze/biaphp"
