@@ -112,8 +112,10 @@
         public function quick_rules( $line_content ) {
 
             $rules = array(
+                '/^( +)?#(.*)\n/' => '',
+                '/^\n$/' => '',
                 '/^<\?$/' => '<?php',
-                '/(\w+) (static )?(\w+)( \((.*)\))? ->$/' => '$1 $2function $3($5) {',
+                '/(\w+)? ?(static )?(\w+)( \((.*)\))? ->$/' => '$1 $2function $3($5) {',
                 '/if (.*)/' => 'if( $1 ) {',
                 '/(else)$/' => 'else {',
                 '/\$_S\[/' => '$_SESSION[',
